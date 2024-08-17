@@ -2,7 +2,7 @@
 @inject ApplicationDbContext Context
 @inject NavigationManager Navigation
 @rendermode InteractiveServer
-@attribute [Authorize]
+@attribute [Authorize(Roles = "admin")]
 
 <h1>@Model.Title</h1>
 <EditForm Model="@Model" OnValidSubmit="OnValidSubmitAsync">

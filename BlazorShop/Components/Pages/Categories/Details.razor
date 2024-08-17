@@ -1,7 +1,7 @@
 ﻿@page "/categories/{id:int}"
 @inject ApplicationDbContext Context
 @rendermode InteractiveServer
-@attribute [Authorize]
+@attribute [Authorize(Roles = "admin")]
 
 @if (Model is null)
 {
